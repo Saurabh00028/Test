@@ -9,14 +9,13 @@ public class Main {
         boolean continueCalculation = true;
         System.out.println("Hey there Good Morning ");
         System.out.println("What kind of help i can do for you ?");
-        System.out.println("Please Enter 1 for `Add` 2 for `Subtract` 3 for `Multiplication` 4 for `Division` ");
         Scanner scanner = new Scanner(System.in);
 
         while (continueCalculation) {
-            System.out.println("Choose an operation: add, subtract, multiply, divide, or exit to quit");
+            System.out.println("Please Enter 1 for `Add` 2 for `Subtract` 3 for `Multiplication` 4 for `Division` or exit or quit to end !! ");
             String operation = scanner.nextLine();
 
-            if (operation.equalsIgnoreCase("exit") || operation.equalsIgnoreCase("")) {
+            if (operation.equalsIgnoreCase("exit") || operation.equalsIgnoreCase("quit")) {
                 continueCalculation = false;
                 System.out.println("Exiting the calculator. Goodbye!");
                 break;
@@ -28,6 +27,7 @@ public class Main {
                 int num1 = scanner.nextInt();
                 System.out.println("Please Enter the second Number :");
                 int num2 = scanner.nextInt();
+                scanner.nextLine();
                 int result = 0;
 
                 switch (user_input) {
